@@ -27,6 +27,9 @@ JsbloggerCodemash::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-  
+
   config.active_record.auto_explain_threshold_in_seconds = 0.2
+
+  config.cache_store = :dalli_store
+  config.action_controller.perform_caching = true
 end
